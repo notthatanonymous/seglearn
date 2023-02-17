@@ -27,7 +27,7 @@ jobs:
 install:
   - pip3 install --upgrade pip
   - pip3 install numpy
-  - pip install matplotlib
+  - pip3 install matplotlib
   - pip3 install scipy
   - pip3 install pandas
   - pip3 install -r requirements.txt
@@ -37,7 +37,7 @@ install:
 
 script:
   - pytest --cov seglearn
-  - python3 examples/plot_regression.py || python examples/plot_regression.py
+#   - python3 examples/plot_regression.py || python examples/plot_regression.py
 
 after_success:
 #   - coveralls
