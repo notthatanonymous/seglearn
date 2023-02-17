@@ -37,7 +37,8 @@ install:
 
 script:
   - pytest --cov seglearn
-  - python3 examples/plot_regression.py || python examples/plot_regression.py
+  - python examples/plot_regression.py
 
 after_success:
-  - coveralls
+#   - coveralls
+  - echo "Successfull."
