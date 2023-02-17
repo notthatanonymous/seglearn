@@ -11,7 +11,7 @@ In this example, we use the pipeline to learn a continuous time series target wi
 
 
 # import matplotlib.pyplot as plt
-# import numpy as np
+import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import cross_validate
