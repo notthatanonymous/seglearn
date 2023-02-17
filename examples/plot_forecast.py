@@ -18,8 +18,8 @@ useful in your application).
 # License: BSD
 
 
-import matplotlib.pyplot as plt
-import numpy as np
+# import matplotlib.pyplot as plt
+# import numpy as np
 from sklearn.linear_model import LinearRegression
 
 from seglearn.pipe import Pype
@@ -58,27 +58,27 @@ print("N segments in train: ", clf.N_train)
 print("N segments in test: ", clf.N_test)
 print("Score: ", score)
 
-# generate some predictions
-y, y_p = clf.transform_predict(X, y)  # all predictions
-ytr, ytr_p = clf.transform_predict(X_train, y_train)  # training predictions
-yte, yte_p = clf.transform_predict(X_test, y_test)  # test predictions
+# # generate some predictions
+# y, y_p = clf.transform_predict(X, y)  # all predictions
+# ytr, ytr_p = clf.transform_predict(X_train, y_train)  # training predictions
+# yte, yte_p = clf.transform_predict(X_test, y_test)  # test predictions
 
-# note - the first few segments in the test set won't have predictions (gap)
-# we plot the 'gap' for the visualization to hopefully make the situation clear
-Ns = len(y)
-ts = np.arange(Ns)  # segment number
-ttr = ts[0:len(ytr)]
-tte = ts[(Ns - len(yte)):Ns]
-tga = ts[len(ytr):(Ns - len(yte))]
-yga = y[len(ytr):(Ns - len(yte))]
+# # note - the first few segments in the test set won't have predictions (gap)
+# # we plot the 'gap' for the visualization to hopefully make the situation clear
+# Ns = len(y)
+# ts = np.arange(Ns)  # segment number
+# ttr = ts[0:len(ytr)]
+# tte = ts[(Ns - len(yte)):Ns]
+# tga = ts[len(ytr):(Ns - len(yte))]
+# yga = y[len(ytr):(Ns - len(yte))]
 
-# plot the results
-plt.plot(ttr, ytr, '.', label="training")
-plt.plot(tga, yga, '.', label="gap")
-plt.plot(tte, yte, '.', label="test")
-plt.plot(tte, yte_p, label="predicted")
+# # plot the results
+# plt.plot(ttr, ytr, '.', label="training")
+# plt.plot(tga, yga, '.', label="gap")
+# plt.plot(tte, yte, '.', label="test")
+# plt.plot(tte, yte_p, label="predicted")
 
-plt.xlabel("Segment Number")
-plt.ylabel("Target")
-plt.legend()
-plt.show()
+# plt.xlabel("Segment Number")
+# plt.ylabel("Target")
+# plt.legend()
+# plt.show()
