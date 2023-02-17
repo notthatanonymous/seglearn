@@ -10,7 +10,7 @@ In this example, we use the pipeline to learn a continuous time series target wi
 # License: BSD
 
 
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression
@@ -46,19 +46,19 @@ print("N segments in test: ", pipe.N_test)
 print("Score: ", score)
 
 # generate some predictions
-ytr, ytr_p = pipe.transform_predict(X_train, y_train)  # training predictions
-yte, yte_p = pipe.transform_predict(X_test, y_test)  # test predictions
-xtr = np.arange(len(ytr))  # segment number
-xte = np.arange(len(yte)) + len(xtr)
+# ytr, ytr_p = pipe.transform_predict(X_train, y_train)  # training predictions
+# yte, yte_p = pipe.transform_predict(X_test, y_test)  # test predictions
+# xtr = np.arange(len(ytr))  # segment number
+# xte = np.arange(len(yte)) + len(xtr)
 
-# plot the amazing results
-plt.plot(xtr, ytr, '.', label="training")
-plt.plot(xte, yte, '.', label="actual")
-plt.plot(xte, yte_p, label="predicted")
-plt.xlabel("Segment Number")
-plt.ylabel("Target")
-plt.legend()
-plt.show()
+# # plot the amazing results
+# plt.plot(xtr, ytr, '.', label="training")
+# plt.plot(xte, yte, '.', label="actual")
+# plt.plot(xte, yte_p, label="predicted")
+# plt.xlabel("Segment Number")
+# plt.ylabel("Target")
+# plt.legend()
+# plt.show()
 
 # # now try a cross validation
 # X = [np.arange(4000) / 100.]
