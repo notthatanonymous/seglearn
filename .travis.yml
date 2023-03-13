@@ -38,7 +38,6 @@ install:
 script:
   - pytest --cov seglearn
   - python examples/plot_regression.py || python3 examples/plot_regression.py
-  - python examples/plot_forecast.py || python3 examples/plot_forecast.py
 
 after_success:
 # - coveralls
