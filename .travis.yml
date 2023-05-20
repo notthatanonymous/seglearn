@@ -7,6 +7,16 @@ jobs:
       os: linux
       dist: xenial
       arch: amd64
+    - name: "Python 3.6 on Xenial linux"
+      python: 3.6
+      os: linux
+      dist: xenial
+      arch: amd64
+    - name: "Python 3.7 on Xenial linux"
+      python: 3.7
+      os: linux
+      dist: xenial
+      arch: amd64
     - name: "Python 3.7 on macOS"
       os: osx
       osx_image: xcode11.5  # Python 3.7 running on macOS 10.14.4
