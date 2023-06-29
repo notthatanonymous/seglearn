@@ -47,7 +47,7 @@ jobs:
       os: windows           # Windows 10.0.17134 N/A Build 17134
       language: shell       # 'language: python' is an error on Travis CI Windows
       before_install:
-        - choco install python --version 3.7.0
+        - choco install python --version 3.7.5
         - python -m pip install --upgrade pip
       env: PATH=/c/Python37:/c/Python37/Scripts:$PATH
 
@@ -67,9 +67,7 @@ install:
   - pip3 install pandas
   - pip3 install -r requirements.txt
   - pip3 install .
-  - pip3 install 'pytest>=3.6'
-  - pip3 install pytest-cov coverage coveralls
-
+  
 script:
 #  - pytest --cov seglearn
 #  - python examples/plot_regression.py || python3 examples/plot_regression.py
