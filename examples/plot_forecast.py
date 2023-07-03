@@ -56,8 +56,7 @@ print("N series in train: ", len(X_train))
 print("N series in test: ", len(X_test))
 print("N segments in train: ", clf.N_train)
 print("N segments in test: ", clf.N_test)
-print("\n\n\nScore: ", score)
-print("\n\n\n")
+print(f"\n\n\nScore: {score}\n\n\n")
 
 # # generate some predictions
 # y, y_p = clf.transform_predict(X, y)  # all predictions
