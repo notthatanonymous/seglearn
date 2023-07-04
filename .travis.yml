@@ -1,46 +1,46 @@
 language: python
 jobs:
   include:
-    # - name: "Python 3.8 on Xenial linux"
-    #   python: 3.8
-    #   os: linux
-    #   dist: xenial
-    #   arch: amd64
-    # - name: "Python 3.6 on Xenial linux"
-    #   python: 3.6
-    #   os: linux
-    #   dist: xenial
-    #   arch: amd64
-    # - name: "Python 3.7 on Xenial linux"
-    #   python: 3.7
-    #   os: linux
-    #   dist: xenial
-    #   arch: amd64
-    # - name: "Python 3.7 on Bionic linux"
-    #   python: 3.7
-    #   os: linux
-    #   dist: bionic
-    #   arch: amd64
-    # - name: "Python 3.7 on Focal linux"
-    #   python: 3.7
-    #   os: linux
-    #   dist: focal
-    #   arch: amd64
-    # - name: "Python 3.7 on Xenial linux on arm64"
-    #   python: 3.7
-    #   os: linux
-    #   dist: xenial
-    #   arch: arm64
+    - name: "Python 3.8 on Xenial linux"
+      python: 3.8
+      os: linux
+      dist: xenial
+      arch: amd64
+    - name: "Python 3.6 on Xenial linux"
+      python: 3.6
+      os: linux
+      dist: xenial
+      arch: amd64
+    - name: "Python 3.7 on Xenial linux"
+      python: 3.7
+      os: linux
+      dist: xenial
+      arch: amd64
+    - name: "Python 3.7 on Bionic linux"
+      python: 3.7
+      os: linux
+      dist: bionic
+      arch: amd64
+    - name: "Python 3.7 on Focal linux"
+      python: 3.7
+      os: linux
+      dist: focal
+      arch: amd64
+    - name: "Python 3.7 on Xenial linux on arm64"
+      python: 3.7
+      os: linux
+      dist: xenial
+      arch: arm64
     # # - name: "Python 3.7 on Xenial linux on IBM Power CPU"
     # #   python: 3.7
     # #   os: linux
     # #   dist: xenial
     # #   arch: ppc64le
-    - name: "Python 3.8 on Xenial linux on IBM Z CPU"
-      python: 3.8
-      os: linux
-      dist: xenial
-      arch: s390x
+    # - name: "Python 3.7 on Xenial linux on IBM Z CPU"
+    #   python: 3.7
+    #   os: linux
+    #   dist: xenial
+    #   arch: s390x
     - name: "Python 3.7 on macOS"
       os: osx
       osx_image: xcode11.5  # Python 3.7 running on macOS 10.14.4
@@ -54,13 +54,13 @@ jobs:
       env: PATH=/c/Python37:/c/Python37/Scripts:$PATH# command to install dependencies
 
 install:
-  - pip3 install --upgrade pip || pip install --upgrade pip
-  - pip3 install numpy || pip install numpy
-  - pip3 install matplotlib || pip install matplotlib
-  - pip3 install scipy || pip install scipy
-  - pip3 install pandas || pip install pandas
-  - pip3 install -r requirements.txt || pip install -r requirements.txt
-  - pip3 install . || pip install .
+  - pip3 install --upgrade pip
+  - pip3 install numpy
+  - pip3 install matplotlib
+  - pip3 install scipy
+  - pip3 install pandas
+  - pip3 install -r requirements.txt
+  - pip3 install .
   
 script:
 #  - pytest --cov seglearn
